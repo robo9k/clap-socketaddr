@@ -13,11 +13,13 @@ pub struct SocketAddrArgs {
 
 impl SocketAddrArgs {
     /// Returns the parsed/default IP address argument
+    #[must_use]
     pub const fn address(&self) -> &std::net::IpAddr {
         &self.address
     }
 
     /// Returns the parsed/default IP port number
+    #[must_use]
     pub const fn port(&self) -> u16 {
         self.port
     }
