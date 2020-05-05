@@ -32,15 +32,11 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           override: true
 
-      - name: Install grcov
-        uses: actions-rs/cargo@v1
-        # uses: actions-rs/install@v0.1
+      - name: Pre-installing grcov
+        uses: actions-rs/install@v0.1
         with:
-          # crate: grcov
-          # version: latest
-          # use-tool-cache: true
-          command: install
-          args: grcov --git https://github.com/mozilla/grcov
+          crate: grcov
+          use-tool-cache: true
 
       - name: Test
         uses: actions-rs/cargo@v1
@@ -49,7 +45,7 @@ jobs:
           args: --all --no-fail-fast ${{ matrix.cargo_flags }}
         env:
           CARGO_INCREMENTAL: "0"
-          RUSTFLAGS: "-Zprofile -Ccodegen-units=1 -Copt-level=0 -Clink-dead-code -Coverflow-checks=off"
+          RUSTFLAGS: "-Zprofile -Ccodegen-units=1 -Copt-level=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"
 
       - name: Generate coverage data
         id: grcov
