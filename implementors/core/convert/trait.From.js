@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["clap_socketaddr"] = [{"text":"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/convert/trait.From.html\" title=\"trait core::convert::From\">From</a>&lt;<a class=\"struct\" href=\"clap_socketaddr/struct.SocketAddrArgs.html\" title=\"struct clap_socketaddr::SocketAddrArgs\">SocketAddrArgs</a>&gt; for <a class=\"enum\" href=\"https://doc.rust-lang.org/nightly/std/net/addr/enum.SocketAddr.html\" title=\"enum std::net::addr::SocketAddr\">SocketAddr</a>","synthetic":false,"types":["std::net::addr::SocketAddr"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,4 @@
+var searchIndex = JSON.parse('{\
+"clap_socketaddr":{"doc":"","i":[[3,"SocketAddrArgs","clap_socketaddr","Arguments to create one `SocketAddr`",null,null],[11,"address","","Returns the parsed/default IP address argument",0,[[],["ipaddr",4]]],[11,"port","","Returns the parsed/default IP port number",0,[[]]],[11,"from","","",0,[[]]],[11,"into","","",0,[[]]],[11,"try_from","","",0,[[],["result",4]]],[11,"try_into","","",0,[[],["result",4]]],[11,"borrow","","",0,[[]]],[11,"borrow_mut","","",0,[[]]],[11,"type_id","","",0,[[],["typeid",3]]],[11,"fmt","","",0,[[["formatter",3]],["result",6]]],[11,"into_app","","",0,[[],["app",3]]],[11,"augment_clap","","",0,[[["app",3]],["app",3]]],[11,"from_arg_matches","","",0,[[["argmatches",3]]]]],"p":[[3,"SocketAddrArgs"]]}\
+}');
+addSearchOptions(searchIndex);initSearch(searchIndex);
