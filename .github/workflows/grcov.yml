@@ -32,15 +32,11 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           override: true
 
-      - name: Install grcov
-        uses: actions-rs/cargo@v1
-        # uses: actions-rs/install@v0.1
+      - name: Pre-installing grcov
+        uses: actions-rs/install@v0.1
         with:
-          # crate: grcov
-          # version: latest
-          # use-tool-cache: true
-          command: install
-          args: grcov --git https://github.com/mozilla/grcov
+          crate: grcov
+          use-tool-cache: true
 
       - name: Test
         uses: actions-rs/cargo@v1
@@ -64,10 +60,6 @@ jobs:
               --ignore='C:/**' \
               --ignore='../**' \
               --ignore-not-existing \
-              --excl-line "#\\[derive\\(" \
-              --excl-br-line "(#\\[derive\\()|(debug_assert)" \
-              --excl-start "#\\[cfg\\(test\\)\\]" \
-              --excl-br-start "#\\[cfg\\(test\\)\\]" \
               --commit-sha ${{ github.sha }} \
               --service-job-id ${{ github.job }} \
               --service-name "GitHub Actions" \
